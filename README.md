@@ -48,12 +48,12 @@ http://localhost:8080/status: Status da API
 
 ## 5. utilização do DBeaver
 
-# Campo	Valor
-# Host	localhost
-# Port	5432
-# Database	usuarios_dev
-# Username	devuser
-# Password	devpass
+### Campo	Valor
+### Host	localhost
+### Port	5432
+### Database	usuarios_dev
+### Username	devuser
+### Password	devpass
 
 ## 6. Publicação da imagem no Docker Hub
 
