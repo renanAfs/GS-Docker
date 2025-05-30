@@ -4,13 +4,13 @@ services:
   web:
     build:
       context: ./app
-    env_file: .env.dev
+    env_file: .env.prod
     volumes:
       - ./app:/app
     ports:
       - "8080:8080"
     networks:
-      - dev_net
+      - prod_net
     depends_on:
       - db
 
@@ -18,14 +18,14 @@ services:
     image: postgres:16
     ports:
     - "5432:5432"
-    env_file: .env.dev
+    env_file: .env.prod
     volumes:
-      - dev_pgdata:/var/lib/postgresql/data
+      - prod_pgdata:/var/lib/postgresql/data
     networks:
-      - dev_net
+      - prod_net
 
 networks:
-  dev_net:
+  prod_net:
 
 volumes:
-  dev_pgdata:
+  prod_pgdata:

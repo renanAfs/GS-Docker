@@ -1,21 +1,19 @@
-# Usar uma imagem oficial do Python
-FROM python:3.9-alpine
-
-# Definir o diretório de trabalho no container
+# Etapa de build
+FROM python:3.12-alpine as builder
 WORKDIR /app
-
-# Copiar os arquivos para o container
 COPY requirements.txt .
+RUN pip wheel --no-cache-dir --wheel-dir /wheels -r requirements.txt
+
+# Etapa final
+FROM python:3.12-alpine
+WORKDIR /app
+COPY --from=builder /wheels /wheels
+COPY requirements.txt .
+RUN pip install --no-cache-dir --no-index --find-links=/wheels -r requirements.txt
+
 COPY app.py .
 
-# Instalar as dependências
-RUN pip install --no-cache-dir -r requirements.txt
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+USER appuser
 
-# Expor a porta 8080
-EXPOSE 8080
-
-# Definir volume para dados sensíveis
-VOLUME ["/mnt/secret"]
-
-# Comando para rodar o app
 CMD ["python", "app.py"]
