@@ -69,7 +69,7 @@ http://localhost:8080/status: Status da API
 docker build -t renanafs/flaskapp:1.0 ./app
 docker push renanafs/flaskapp:1.0
 
-## 7. Ambiente de produção
+## 7. Ambiente de dev
 
 docker compose -f docker-compose.dev.yml up -d
 
