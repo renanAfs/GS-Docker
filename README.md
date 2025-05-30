@@ -71,6 +71,10 @@ docker push renanafs/flaskapp:1.0
 
 ## 7. Ambiente de produção
 
+docker compose -f docker-compose.dev.yml up -d
+
+## 7. Ambiente de produção
+
 docker compose -f docker-compose.prod.yml up -d
 O ambiente de produção expõe a aplicação em localhost:80
 
