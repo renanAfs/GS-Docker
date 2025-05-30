@@ -17,16 +17,14 @@ Este projeto implementa uma aplicação Python (Flask) containerizada, que se co
 
 ---
 
-2. .env.dev
+## 2. .env.dev
 
-# .env.dev
 POSTGRES_USER=devuser
 POSTGRES_PASSWORD=devpass
 POSTGRES_DB=usuarios_dev
 
-.env.prod:
+## .env.prod:
 
-# .env.prod
 POSTGRES_USER=produser
 POSTGRES_PASSWORD=prodpass
 POSTGRES_DB=usuarios_prod
