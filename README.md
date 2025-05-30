@@ -17,24 +17,6 @@ Este projeto implementa uma aplicação Python (Flask) containerizada, que se co
 
 ---
 
-## 📁 Estrutura do Projeto
-
-infra/
-├── app/
-│ ├── app.py
-│ ├── requirements.txt
-│ └── Dockerfile
-├── docker-compose.dev.yml
-├── docker-compose.prod.yml
-├── .env.dev
-└── .env.prod
-
-yaml
-Copy
-Edit
-
-
-
 2. .env.dev
 
 # .env.dev
