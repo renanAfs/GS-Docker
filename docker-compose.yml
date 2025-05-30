@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env.prod
+    networks:
+      - prod_network
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    env_file:
+      - .env.prod
+    networks:
+      - prod_network
+    volumes:
+      - db_data:/var/lib/mysql
+
+networks:
+  prod_network:
+
+
+volumes:
+  db_data:

@@ -1,0 +1,21 @@
+# Usar uma imagem oficial do Python
+FROM python:3.9-alpine
+
+# Definir o diretório de trabalho no container
+WORKDIR /app
+
+# Copiar os arquivos para o container
+COPY requirements.txt .
+COPY app.py .
+
+# Instalar as dependências
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expor a porta 8080
+EXPOSE 8080
+
+# Definir volume para dados sensíveis
+VOLUME ["/mnt/secret"]
+
+# Comando para rodar o app
+CMD ["python", "app.py"]
