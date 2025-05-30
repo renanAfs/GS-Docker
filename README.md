@@ -31,7 +31,7 @@ POSTGRES_USER=produser
 POSTGRES_PASSWORD=prodpass
 POSTGRES_DB=usuarios_prod
 
-3. Ambiente de desenvolvimento
+## 3. Ambiente de desenvolvimento
 
 docker compose -f docker-compose.dev.yml up -d
 📌 Isso criará:
@@ -40,13 +40,13 @@ A aplicação Flask em localhost:8080
 
 O banco PostgreSQL escutando na porta 5432
 
-4. Acessar:
+## 4. Acessar:
 
 http://localhost:8080: Formulário de cadastro
 
 http://localhost:8080/status: Status da API
 
-5. utilização do DBeaver
+## 5. utilização do DBeaver
 
 Campo	Valor
 Host	localhost
@@ -55,17 +55,17 @@ Database	usuarios_dev
 Username	devuser
 Password	devpass
 
-6. Publicação da imagem no Docker Hub
+## 6. Publicação da imagem no Docker Hub
 
 docker build -t renanafs/flaskapp:1.0 ./app
 docker push renanafs/flaskapp:1.0
 
-7. Ambiente de produção
+## 7. Ambiente de produção
 
 docker compose -f docker-compose.prod.yml up -d
 O ambiente de produção expõe a aplicação em localhost:80
 
-8. Análise de segurança da imagem
+## 8. Análise de segurança da imagem
 
 Com Docker Scout:
 docker scout quickview renanafs/flaskapp:1.0
@@ -80,7 +80,7 @@ Remoção de dependências desnecessárias
 
 Usuário não-root
 
-🔒 Segurança e boas práticas aplicadas
+## 🔒 Segurança e boas práticas aplicadas
 
 Execução com usuário não-root dentro do container.
 
@@ -92,7 +92,7 @@ Dockerfile com imagem leve e sem dependências desnecessárias.
 
 Versionamento da imagem no Docker Hub.
 
-🔍 Boas práticas aplicadas
+## 🔍 Boas práticas aplicadas
 
 Estrutura de diretórios clara
 
@@ -102,6 +102,6 @@ Uso de DBeaver como GUI segura
 
 Versionamento da imagem Docker
 
-📸 Evidência no Docker Hub
+## 📸 Evidência no Docker Hub
 Imagem disponível em: https://hub.docker.com/r/renanafs/flaskapp/tags
 
