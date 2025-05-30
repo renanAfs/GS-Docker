@@ -46,14 +46,23 @@ http://localhost:8080: Formulário de cadastro
 
 http://localhost:8080/status: Status da API
 
-## 5. utilização do DBeaver
+## 5. utilização do DBeaver (dev)
 
 ### Campo	Valor
 ### Host	localhost
 ### Port	5432
 ### Database	usuarios_dev
 ### Username	devuser
-### Password	devpass
+### Password	devpass## 
+
+## 5.1 utilização do DBeaver (prod)
+
+### Campo	Valor
+### Host	localhost
+### Port	5432
+### Database	usuarios_prod
+### Username	produser
+### Password	prodpass
 
 ## 6. Publicação da imagem no Docker Hub
 
