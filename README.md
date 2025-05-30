@@ -122,3 +122,4 @@ Versionamento da imagem Docker
 
 📸 Evidência no Docker Hub
 Imagem disponível em: https://hub.docker.com/r/renanafs/flaskapp/tags
+
