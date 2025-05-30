@@ -115,4 +115,5 @@ Versionamento da imagem Docker
 
 ## 📸 Evidência no Docker Hub
 Imagem disponível em: https://hub.docker.com/r/renanafs/flaskapp/tags
+![image](https://github.com/user-attachments/assets/2b7553a3-ee1a-46b0-8e19-206b96c6b3b1)
 
